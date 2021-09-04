@@ -10,6 +10,6 @@ app.get("/", (req,res)=>{
 })
 const Filmerota = require("./routes/filmes.routes");
 app.use("/filmes", Filmerota);
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.info(`Servidor rodando em http://localhost:${port}`);
 });
