@@ -3,7 +3,7 @@ const router = express.Router();
 const Filme = require("../model/model");
 
 
-router.get("/", async (req, res) => {
+router.get("/filmes", async (req, res) => {
   await Filme.find({})
     .then((filme) => res.send(filme))
     .catch((err) => console.error(err));
