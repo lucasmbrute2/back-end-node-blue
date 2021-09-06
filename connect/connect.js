@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 
-const Connect = () => {
-  mongoose
-    .connect("mongodb+srv://lucasmbrute2:lu280500@cluster0.dkgdi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+const Connect = (url,user,pass,banco) => {
+  mongoose.connect(`${url}/${banco}`, {
+      user: user,
+      pass: pass,
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
