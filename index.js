@@ -15,7 +15,7 @@ app.use(express.json());
 Connect(db_url,db_user,db_pass,db_data);
 
 
-app.get("/", (req,res)=>{
+app.get("/filme", (req,res)=>{
   res.send("<h1>Hello</h1>")
 })
 
