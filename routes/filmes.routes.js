@@ -32,6 +32,11 @@ router.put("/update/:id", async (req, res) => {
     .catch((err) => res.status(400).send("Algo deu errado"));
 });
 
+router.delete('/delete', async (req,res)=>{
+  await Filme.deleteMany({})
+  .then(()=>res.status(200).send("A lista foi totalmente excluida."))
+  .catch((err)=>res.error(err));
+})
 router.delete("/delete/:id", async (req,res) =>{
   await Filme.deleteOne({_id: req.params.id})
   .then(()=>res.status(200).send('Filme deletado com sucesso!'))
