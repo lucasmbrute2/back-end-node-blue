@@ -10,7 +10,7 @@ const corsOptions = {
 }
 const cors = require("cors");
 const app = express();
-const port = 3000;
+const port = 3001;
 const Connect = require("./connect/connect");
 const db_url = process.env.DB_URL
 const db_user = process.env.DB_USER
