@@ -5,7 +5,7 @@ const filmeModel = new mongoose.Schema({
   lancamento: {type:String, required: true},
   imagem: {type: String, required: true},
   trailer: { type: String },
-  dataCriacao: {type: Date , Default: Date.now}
+  dataCriacao: {type: Date , default: Date.now}
 });
 
 const Filme = mongoose.model("filmes", filmeModel);

@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/filme/:id", async (req, res) => {
-  await Filme.find({ _id: req.params.id })
+  await Filme.findOne({ _id: req.params.id })
     .then((filme) => res.status(200).send(filme))
     .catch((err) => res.status(400).send("Algo deu errado!"));
 });

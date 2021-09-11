@@ -5,12 +5,12 @@ if(process.env.NODE_ENV !== 'production'){
 
 const express = require("express");
 const corsOptions = {
-  origin: 'http://localhost:3000/',
+  origin: 'http://localhost:3000',
   optionSucessStatus: 200 
 }
 const cors = require("cors");
 const app = express();
-const port = 3001;
+const port = 3002;
 const Connect = require("./connect/connect");
 const db_url = process.env.DB_URL
 const db_user = process.env.DB_USER
